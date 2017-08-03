@@ -15,10 +15,6 @@
   <!-- Animate CSS\
    ================================================== -->\
   <link rel="stylesheet" href="css/animate.min.css">\
-  <!-- Font Icons CSS\
-   ================================================== -->\
-  <link rel="stylesheet" href="css/font-awesome.min.css">\
-  <link rel="stylesheet" href="css/ionicons.min.css">\
   <!-- Main CSS\
    ================================================== -->\
   <link rel="stylesheet" href="css/style.css">\
