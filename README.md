@@ -13,15 +13,15 @@ The MSC website will now be hosted on GitHub. This will allow everyone to be abl
 No HTML/CSS experience necessary, my goal is to create ways to make editing the website as easy as possible.
 
 
+## Please add your contact information to the page!!
+Please fill out the information at [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSfWa4LKbjls5QBLAPzayQbiHTSIUbM_faIBpq5ngFgc7z8QSA/viewform?usp=sf_link)
 
-## Creating your own personal page
+## Want to add an article to the page?
+Please fill out information at [this form](https://goo.gl/forms/DgqEWT3vL19SMSMJ3)
 
-This section will be updated soon.
+## Want to have a group page?
 
-```
-HTML Template will appear here...
-```
-
+Details will be updated soon!!
 
 ## Questions? Concerns? Comments? Tips/advice?
 
