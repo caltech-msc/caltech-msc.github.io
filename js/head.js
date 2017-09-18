@@ -1,4 +1,4 @@
-  document.write('\
+document.write('\
   <meta charset="utf-8">\
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">\
   <meta name="viewport" content="width=device-width, initial-scale=1">\
@@ -30,7 +30,6 @@
   <div class="sk-spinner sk-spinner-pulse"></div>\
 </div>\
 \
-\
 <section id = "colorbar">\
 </section>\
 \
@@ -41,16 +40,11 @@
 <div class="container">\
 \
   <div class="navbar-header">\
-\
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">\
-    <i class="fa fa-bars"></i>\
-    </button>\
     <a class="navbar-brand page-scroll" href="index.html">MSC@Caltech</a>\
   </div>\
-  <!-- Collect the nav links, forms, and other content for toggling -->\
+\
   <div class="collapse navbar-collapse navbar-right navbar-main-collapse">\
     <ul class="nav navbar-nav">\
-\
       <li>\
       <a href="index.html">Home</a>\
       </li>\
@@ -61,13 +55,16 @@
       <a href="research.html">Research</a>\
       </li>\
       <li>\
-      <a href="insertlink.html">Publications</a>\
+      <a href="#">Publications</a>\
       </li>\
       <li>\
       <a href="group.html">Group</a>\
       </li>\
       <li>\
-      <a href="contact.html">Contact Us</a>\
+      <a href="projects.html">Projects</a>\
+      </li>\
+      <li>\
+      <a href="contact.html">Visit Us</a>\
       </li>\
     </ul>\
   </div>\
@@ -75,5 +72,4 @@
 </div>\
 <!-- /.container -->\
 </nav>\
-\
 ');

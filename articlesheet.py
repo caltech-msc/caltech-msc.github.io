@@ -40,8 +40,6 @@ first = '''
     <script src="js/head.js"></script>
     </head>
     
-    
-    
     <!-- Header section
     ================================================== -->
     <section id="header" class="header-one parallax-section">
@@ -73,8 +71,6 @@ first = '''
     </div>
     </section>
     
-    <section id = "colorbar" class="wow fadeIn" data-wow-delay="0.5"></section>
-    
     <!-- A little a bit about MSC section
     ================================================== -->
     <section id="blog">
@@ -83,7 +79,7 @@ first = '''
     <div class="row">
     
     <!-- This section is the beginning text of the website. Please edit inside the tags. -->
-    <div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.5s">
+    <div class="col-md-12 col-sm-12">
     <h1>Bridging the gap between theory and application</h1>
     <p>There has long been the dream that theory (quantum mechanics, molecular dynamics, and statistical mechanics) properly incorporated into computer software could be used to design new drugs, new catalysts.........</p>
     </div>
@@ -92,12 +88,10 @@ first = '''
     </div>
     </section>
     
-    <section id = "colorbar" class="wow fadeIn" data-wow-delay="0.5"></section>
-    
     <!-- Research section
     ================================================== -->
     
-    <section id="header" class="header-two wow fadeIn parallax-section" data-wow-delay="0.5">
+    <section id="header" class="header-two wow fadeIn parallax-section">
     <div class="container">
     <div class="row">
     
@@ -120,21 +114,20 @@ f.write(first)
 
 number =  int(sheet.acell('C1').value)
 if number >= 3:
-    for i in range(number,number+3):
-    	row = sheet.row_values(i)
-    	name = row[1]
-    	email = row[2]
-        title = row[3]
+    for i in range(3,6):
+        row = sheet.row_values(i)
+        email = row[2]
+        name = row[1]
+        arttitle = row[3]
         date = row[4]
         if row[5] == "Image":
-            image= row[6]
+            image= 'https://drive.google.com/uc?id=' + row[6][33:]
         else:
             slides = row[7]
         paragraph = row[8]
         URL = row[9]
 
-
-        if i%2 = 0:
+        if i%2 == 1:
             f.write('<!-- TEMPLATE START')
             f.write('    ================================================== -->')
             f.write('<section id="blog">')
@@ -142,7 +135,7 @@ if number >= 3:
             f.write('        <div class="row">')
             f.write('            <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1s">')
             f.write('                <div class="blog-thumb">')
-            f.write('                    <a href="single-post.html"><h1>' + title + '</h1></a>')
+            f.write('                    <a href="single-post.html"><h1>' + arttitle + '</h1></a>')
             f.write('                        <div class="post-format">')
             f.write('                        <span>By <a href="mailto:' + email + '">' + name + '</a></span>')
             f.write('                        <span><i class="fa fa-date"></i> ' + date + '</span>')
@@ -166,7 +159,7 @@ if number >= 3:
             f.write('<!-- TEMPLATE END')
             f.write('    ================================================== -->')
         
-    # for the other post style
+    # for the other post style (grey)
         else:
             f.write('<!-- TEMPLATE START')
             f.write('    ================================================== -->')
@@ -183,7 +176,7 @@ if number >= 3:
                 f.write('   </div>')
             f.write('            <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1s">')
             f.write('                <div class="blog-thumb">')
-            f.write('                    <a href="single-post.html"><h1>' + title + '</h1></a>')
+            f.write('                    <a href="single-post.html"><h1>' + arttitle + '</h1></a>')
             f.write('                        <div class="post-format">')
             f.write('                        <span>By <a href="mailto:' + email + '">' + name + '</a></span>')
             f.write('                        <span><i class="fa fa-date"></i> ' + date + '</span>')
@@ -232,7 +225,7 @@ os.remove("research.html")
 print("Old file removed.")
 
 
-r = open('index.html','w')
+r = open('research.html','w')
 print("New research file created. Inputting information... (this will take a while if the archive is very large)")
 
 first1 = '''
@@ -275,50 +268,60 @@ http://www.tooplate.com/view/2082-pure-mix
    <div class="container">
       <div class="row">
 
-    <div class="sidebar col-xs-4">
+    <div class="sidebar col-xs-4 grey">
 
             <div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay=".4s">
-                <h1>______________</h1>
                 <h1>FEATURED RESEARCH</h1>
                 <p>Hello there! This is an archive of featured posts that appear on the front home page of the MSC. Please feel free to browse!</p>
              </div>
 '''
 r.write(first1)
 
-number =  int(sheet.acell('C1').value)
-if number >= 6:
-    for i in range(number+3,number+6):
+#these are posts in the mini column
+
+if number >= 9:
+    for i in range(9,12):
         row = sheet.row_values(i)
         name = row[1]
         email = row[2]
-        title = row[3]
+        arttitle = row[3]
         date = row[4]
         if row[5] == "Image":
-            image= row[6]
+            image= 'https://drive.google.com/uc?id=' + row[6][33:]
         else:
             slides = row[7]
         paragraph = row[8]
         URL = row[9]
+        r.write('<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay=".4s">')
+        r.write('      <div class="blog-thumb">')
+        if row[5]== "Image":
+            r.write('         <img src="' + image + '" class="img-responsive" alt="Blog">')
+        else:
+            r.write('   ' + slides)
+        r.write('         <a href="' + URL + '"><h1>' + arttitle + '</h1></a>')
+        r.write('            <div class="post-format">')
+        r.write('              <span>By <a href="mailto:' + email + '">' + name + '</a></span>')
+        r.write('              <span><i class="fa fa-date"></i> ' + date + '</span>')
+        r.write('           </div>')
+        r.write('           <p>' + paragraph + '</p>')
+        r.write('      </div>')
+        r.write('</div>')
 
-            r.write('<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay=".4s">')
-            r.write('      <div class="blog-thumb">')
-            if row[5]== "Image":
-                r.write('         <a href="' + URL + '"><img src="' + image + '" class="img-responsive" alt="Blog"></a>')
-            else:
-                r.write('   ' + slides)
-            r.write('         <a href="' + URL + '"><h1>' + title + '</h1></a>')
-            r.write('            <div class="post-format">')
-            r.write('              <span>By <a href="mailto:' + email + '">' + name + '</a></span>')
-            r.write('              <span><i class="fa fa-date"></i> ' + date + '</span>')
-            r.write('           </div>')
-            r.write('           <p>' + paragraph + '</p>')
-            r.write('           <a href="' + URL + '" class="btn btn-default">Details</a>')
-            r.write('      </div>')
-            r.write('</div>')
-            
 
-#need to write the list format
-
+for i in range(12, number + 3):
+        row = sheet.row_values(i)
+        name = row[1]
+        email = row[2]
+        arttitle = row[3]
+        date = row[4]
+        paragraph = row[8]
+        URL = row[9]
+        r.write('<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay=".4s">')
+        r.write('      <div class="blog-thumb">')
+        r.write('         <p><a href="' + URL + '"><b>' + arttitle + '</b></a> // By <a href="mailto:' + email + '">' + name + '</a> // ' + date + '</p>')
+        r.write('           <p>' + paragraph + '</p>')
+        r.write('      </div>')
+        r.write('</div>')
 
 second2 = '''
     </div>
@@ -326,36 +329,39 @@ second2 = '''
     '''
 r.write(second2)
 
-if number >= 3:
-    for i in range(number,number+3):
+
+#these are the main posts in the main column
+
+if number >= 6:
+    for i in range(6,9):
         row = sheet.row_values(i)
         name = row[1]
         email = row[2]
-        title = row[3]
+        arttitle = row[3]
         date = row[4]
         if row[5] == "Image":
-            image= row[6]
+            image= 'https://drive.google.com/uc?id=' + row[6][33:]
         else:
             slides = row[7]
         paragraph = row[8]
         URL = row[9]
-
-            r.write('<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay=".4s">')
-            r.write('      <div class="blog-thumb">')
-            if row[5]== "Image":
-                r.write('         <a href="' + URL + '"><img src="' + image + '" class="img-responsive" alt="Blog"></a>')
-            else:
-                r.write('   ' + slides)
-            r.write('         <a href="' + URL + '"><h1>' + title + '</h1></a>')
-            r.write('            <div class="post-format">')
-            r.write('              <span>By <a href="mailto:' + email + '">' + name + '</a></span>')
-            r.write('              <span><i class="fa fa-date"></i> ' + date + '</span>')
-            r.write('           </div>')
-            r.write('           <p>' + paragraph + '</p>')
-            r.write('           <a href="' + URL + '" class="btn btn-default">Details</a>')
-            r.write('      </div>')
-            r.write('</div>')
-
+        r.write('<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay=".4s">')
+        r.write('      <div class="blog-thumb">')
+        if row[5]== "Image":
+            r.write('         <img src="' + image + '" class="img-responsive" alt="Blog">')
+        else:
+            r.write('   ' + slides)
+        r.write('       <div class ="alignright">')
+        r.write('         <a href="' + URL + '"><h1>' + arttitle + '</h1></a>')
+        r.write('            <div class="post-format">')
+        r.write('              <span>By <a href="mailto:' + email + '">' + name + '</a></span>')
+        r.write('              <span><i class="fa fa-date"></i> ' + date + '</span>')
+        r.write('           </div>')
+        r.write('           <p>' + paragraph + '</p>')
+        r.write('           <a href="' + URL + '" class="btn btn-default">Details ></a>')
+        r.write('      </div>')
+        r.write('      </div>')
+        r.write('</div>')
 
 closing = '''
         

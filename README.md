@@ -16,17 +16,20 @@ Hello all! This website is still in the works, so it would be great to receive p
 No HTML/CSS experience necessary, my goal is to create ways to make editing the website as easy as possible.
 
 ## Please add your contact information to the page!!
-Please fill out the information at [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSfWa4LKbjls5QBLAPzayQbiHTSIUbM_faIBpq5ngFgc7z8QSA/viewform?usp=sf_link)
+Please fill out the information at [this Google form](https://goo.gl/forms/DOg1tRtXcnMMhyR92)
 
 ## Want to add an article to the page?
-Please fill out information at [this form](https://goo.gl/forms/DgqEWT3vL19SMSMJ3)
+Please fill out information at [this form](https://goo.gl/forms/oBqWIgrxNIxWgiKm1)
 
-## Want to have a group page?
+## Add your group page to the site!
 
-Details will be updated soon!!
+Link to add the page URL [here](https://goo.gl/forms/I59kC3F6p6cODwWg1)
+
+## Want to create a group/personal page, hosted by this very website?
+See instructions [here]()
+
 
 ## Current list of tasks:
-* Creating html template for group and personal pages
 * Updating "About" section so it will have more information
 
 Please note that all of these tasks require time, so please be patient! If you have HTML experience and would like to help, please feel free to do so and send me an email as well :)

@@ -87,16 +87,12 @@ for i in range(3,3+people):
 	cellTF = row[5]
 	if cellTF == 'Yes':
 	    cell = row[4]
-	pfp = row[7]
-	if row[6] == 'Google Drive':
-		pfp = 'https://drive.google.com/uc?id=' + row[7]
-	if row[6] == 'None':
-		pfp = 'images/personalpics/nopic.png'
-	info = row[8]
+	pfp = 'https://drive.google.com/uc?id=' + row[6][33:]
+	info = row[7]
+	if row[8] != "":
+		personal = row[8]
 	if row[9] != "":
-		personal = row[9]
-	if row[10] != "":
-		group = row[10]
+		group = row[9]
 	f.write('                           <!-- ' + name + ' TEMPLATE START -->\n')
 	f.write('                           <div class="iso-box col-md-3 col-sm-6">\n')
 	f.write('                                 <div class="portfolio-thumb">\n')
@@ -109,10 +105,10 @@ for i in range(3,3+people):
 	    f.write('                                                  <h2>' + cell + '</h2>\n')
 	    del cell
 	f.write('                                                  <h2><a href="mailto:' + email + '">email</a></h2>\n')
-	if row[9] != "":
+	if row[8] != "":
 		f.write('                                                  <h2><a href="' + personal + '">Personal Page</a></h2>\n')
 		del personal
-	if row[10] != "":
+	if row[9] != "":
 		f.write('                                                  <h2><a href="' + group + '">Group Page</a></h2>\n')
 		del group
 	f.write('                                            </div>\n')
@@ -161,7 +157,7 @@ second = '''
 f.write(second)
 
 # UPDATING TIME STAMP
-sheet.update_acell('A1', 'Last updated: '+ time.strftime("%d/%m/%Y")+ ' ' + time.strftime("%H:%M:%S"))
+sheet.update_acell('A1', 'Last updated: '+ time.strftime("%m/%d/%Y")+ ' ' + time.strftime("%H:%M:%S"))
 print('Update successful.')
 
 f.close()

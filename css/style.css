@@ -9,7 +9,7 @@ http://www.tooplate.com/view/2082-pure-mix
 /* Body 
 ------------------------------------- */
 body {
-		background: #ffffff;
+    background: #ffffff;
     font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -72,7 +72,7 @@ h6 {
 p, 
 .contact, 
 dd{
-  color: #777;
+  color: #696969;
   font-size: 16px;
   line-height: 28px;
   word-spacing: 1px;
@@ -82,7 +82,7 @@ dd{
 a {
   outline: none;
   text-decoration: none;
-  color: #777;
+  color: #696969;
 }
 
 a:hover, a h1:hover,
@@ -100,6 +100,13 @@ a:focus {
 img {
   width: 100%;
   max-width: 100%;
+}
+
+hr {
+  color: #000;
+  display: block;
+  border-width: 1px;
+  size: 2px;
 }
 
 
@@ -145,104 +152,62 @@ img {
             transform: scale(1);
     opacity: 0; } }
 
-
-
-/* navigation styles
-/* ========================================== */
+/* this is the orange color line */
 #colorbar {
--webkit-background-size: cover;
+  -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
   text-align: center;
   height: 7px;
   background-color: #FF6A13;
-
 }
+
+/* navigation styles
+/* ========================================== */
 .navbar-custom {
   margin-bottom:0;
-  border-bottom:1px solid rgba(255,255,255,.3);
   font-family: 'Source Sans Pro', sans-serif;
-  background-color:#000;
   letter-spacing: 4px;
   font-weight: 250;
   text-transform:lowercase;
+  padding:20px 0;
+  border-bottom:0;
+  background:0 0;
+  -webkit-transition:background .5s ease-in-out,padding .5s ease-in-out;
+  -moz-transition:background .5s ease-in-out,padding .5s ease-in-out;
+  transition:background .5s ease-in-out,padding .5s ease-in-out;
 }
 .navbar-custom .container {
   width: 100%;
 }
-.navbar-custom .navbar-brand {
-  font-size:23px;
-  text-transform:lowercase;
-  letter-spacing:3px;
-}
-.navbar-custom .navbar-brand:focus {
-  outline:0;
-}
-.navbar-custom .navbar-brand .navbar-toggle {
-  padding:4px 6px;
-  font-size:23px;
-  color:#fff;
-}
-.navbar-custom .navbar-brand .navbar-toggle:focus,.navbar-custom .navbar-brand .navbar-toggle:active {
-  outline:0;
-}
-.navbar-custom a {
+.navbar-header a {
+  font-size:25px;
   color: #fff;
 }
-.navbar-custom .nav li a {
-  -webkit-transition:background .3s ease-in-out;
-  -moz-transition:background .3s ease-in-out;
-  transition:background .3s ease-in-out;
+.navbar-custom li a {
+  color: #fff;
   font-size:20px;
-
 }
+
 .navbar-custom .nav li a:hover {
   outline:0;
   color:#FF6A13;
   background-color:transparent;
-  -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  transition: color 0.2s ease, border-bottom-color 0.2s ease;
-
-}
-.navbar-custom .nav li a:focus,.navbar-custom .nav li a:active {
-  outline:0;
-  background-color:transparent;
-}
-.navbar-custom .nav li.active {
-  outline:0;
-}
-.navbar-custom .nav li.active a {
-  color:#FF6A13;
-}
-.navbar-custom .nav li.active a:hover {
-  color:#FF6A13;
+  -moz-transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  -ms-transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
-@media(min-width:768px) {
-  .navbar-custom {
-    padding:20px 0;
-    border-bottom:0;
-    font-size:13px;
-    background:0 0;
-    -webkit-transition:background .5s ease-in-out,padding .5s ease-in-out;
-    -moz-transition:background .5s ease-in-out,padding .5s ease-in-out;
-    transition:background .5s ease-in-out,padding .5s ease-in-out;
-
-  }
-
-     .navbar-custom.top-nav-collapse {
+.navbar-custom.top-nav-collapse {
      padding:0;
      border-bottom:1px solid rgba(255,255,255,.3);
-     color:#333;
      background:#fff;
   }
-  .navbar-custom.top-nav-collapse a {
+.navbar-custom.top-nav-collapse a {
     color:#333;
     display:inline-block;
   }
-}
 
 /* header section styles
 /* ========================================== */
@@ -251,53 +216,34 @@ img {
   background-size: cover;
   background-position: center center;
   text-align: center;
-  padding-top: 130px;
   padding-bottom: 100px;
+  height: 42vh;
+  min-height: 420px;
+  padding-top: 120px;
 }
-
-
 #header .header-thumb *{
   color: #fff;
   text-transform: unset;
   font-weight:200;
-  
-
 }
-
 #header .header-thumb h1 {
   font-size: 3rem;
   line-height: 3.5rem;
   }
-
-  #header .header-thumb h3 {
+#header .header-thumb h3 {
   font-size: 1.5rem;
   text-transform: lowercase;
-  }
-
+}
 #header .header-thumb h1 *{
   background-color: #FF6A13;
-  }
-
-.header-one .header-thumb,
-.header-two .header-thumb,
-.header-three .header-thumb,
-.header-four .header-thumb,
-.header-five .header-thumb {
+}
+.header-thumb {
   padding: 32px 0 32px 0 !important;
 }
-
-.header-one, .header-two,
-.header-three, .header-four,
-.header-five {
-  height: 42vh !important;
-  min-height: 420px;
-  padding-top: 120px !important;
-}
-
 .header-one {
   background: url('../images/caltech/beckman.jpg') no-repeat;
   height: 60vh !important;
-  min-height: 785px;
+  min-height: 785px !important;
   padding-top: 150px !important;
   -webkit-background-size:cover;
   -moz-background-size:cover;
@@ -310,7 +256,6 @@ img {
 .header-two {
   background: url('../images/caltech/aerial.jpg') no-repeat;
 }
-
 .header-three {
   background: url('../images/caltech/schlinger.jpg') no-repeat;
 }
@@ -320,7 +265,6 @@ img {
 .header-five {
   background: url('../images/caltech/moore_walk.jpg') no-repeat;
 }
-
 .parallax-section {
   background-attachment: fixed !important;
   background-size: cover !important;
@@ -498,13 +442,6 @@ img {
   margin-top: 20px;
 }
 
-
-
-/* HOME PAGE section styles and FEATURED RESEARCH
-/* ========================================== */
-
-
-
 /* blog & single post section styles
 /* ========================================== */
 .grey {
@@ -518,8 +455,8 @@ img {
 }
 
 #blog .blog-thumb {
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 #blog .post-format,
@@ -571,7 +508,6 @@ img {
   color: #ffffff;
 }
 
-
 /*SIDE BAR FORMATTING*/
 .sidebar-right .main{
   float:left;
@@ -579,8 +515,16 @@ img {
 .idebar-right .sidebar{
   float:right;
 }
-
-
+.sidebar h1 {
+  font-size: 25px;
+}
+.alignright{
+  align-content: right;
+  text-align: right;
+}
+.sidebar .blog-thumb p {
+  line-height: 10px;
+}
 
 /* contact section styles
 /* ========================================== */
@@ -602,7 +546,6 @@ img {
 }
 
 
-
 /* footer section styles
 /* ========================================== */
 footer {
@@ -612,88 +555,10 @@ footer {
   text-align: center;
 }
 
-
 .vert-line {
    border-right: thin solid #FF6A13;
  }
-
  .resize {
   width: 300px;
   height: auto;
  }
-
-
-/* Responsive Mobile styles
-/* ========================================== */
-@media (max-width: 980px) {
-
-  .intro-inner {top: 30%;}
-
-  #contact .col-md-4 {
-    padding: 62px 20px 42px 32px;
-  }
-
-  #contact .col-md-4 p {
-    font-size: 12px;
-  }
-
-  #contact #map-canvas {
-    margin-bottom: 60px;
-  }
-}
-
-
-@media (max-width: 768px) {
-
-  .brand {
-    padding-left: 24px;
-  }
-
-  .header-one, .header-two,
-  .header-three, .header-four,
-  .header-five {
-    min-height: 380px;
-	padding-top: 80px !important;
-  }
-
-  #about .col-md-4,
-  #single-project .col-md-3 {
-    padding-bottom: 32px;
-  }
-
-}
-
-
-@media (max-width: 700px) {
-
-  h1 {
-    font-size: 1.3rem;
-  }
-  h3 {
-    font-size: 13px;
-    letter-spacing: 3px;
-  }
-  a {
-    color: #fff;
-  }
-
-  .filter-wrapper {
-    padding: 0px;
-  }
-
-  #contact {
-    padding-bottom: 4rem;
-  }
-
-  #contact .col-md-4 {
-    padding: 32px 20px 22px 62px;
-  }
-  .contact-submit {
-	width: 70%;
-  }
-
-}
-
-@media (max-width: 450px) {
-  .intro-inner {top: 50%;}
-}
