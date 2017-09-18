@@ -26,7 +26,7 @@ Please fill out information at [this form](https://goo.gl/forms/oBqWIgrxNIxWgiKm
 Link to add the page URL [here](https://goo.gl/forms/I59kC3F6p6cODwWg1)
 
 ## Want to create a group/personal page, hosted by this very website?
-See instructions [here]()
+See instructions [here](https://github.com/aliwang2001/createownpage)
 
 
 ## Current list of tasks:
