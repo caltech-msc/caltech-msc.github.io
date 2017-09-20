@@ -1,6 +1,6 @@
 # MSC website on GITHUB
-A template for the website is here: [caltech-msc.github.io](https://caltech-msc.github.io)
-(note: to make it as real as possible, I just added random blurbs of text and some nice pictures of caltech lol)
+The website is located here: [caltech-msc.github.io](https://caltech-msc.github.io)
+
 The MSC website will now be hosted on GitHub. This will allow everyone to be able to collaborate and help make the website amazing for the public. A copy of all website files will be on a folder in the server, and someone familiar with GitHub will update the website every week or so.
 
 # Important:
@@ -22,22 +22,22 @@ Please fill out the information at [this Google form](https://goo.gl/forms/DOg1t
 Please fill out information at [this form](https://goo.gl/forms/oBqWIgrxNIxWgiKm1)
 
 ## Add your group page to the site!
-
 Link to add the page URL [here](https://goo.gl/forms/I59kC3F6p6cODwWg1)
 
 ## Want to create a group/personal page, hosted by this very website?
 See instructions [here](https://github.com/aliwang2001/createownpage)
 
-
 ## Current list of tasks:
 * Updating "About" section so it will have more information
+* If you would like to help this process, please edit the Google Doc [here](https://docs.google.com/document/d/1-2V_RyDDTXS5bleCU0t32LKlhaJrq5E2S_qe42nsAew/edit?usp=sharing).
 
-Please note that all of these tasks require time, so please be patient! If you have HTML experience and would like to help, please feel free to do so and send me an email as well :)
+The website information will be updated every 2-3 days. 
+If you have HTML/programming experience and would like to help with possible bugs/further developments, please feel free to do so and send me an email as well :)
 
 ## Questions? Concerns? Comments? Tips/advice?
 
 Please feel free to email [aliwang2001@gmail.com](mailto:aliwang2001@gmail.com) if you need any help setting anything up.
 Tips and advice on how to make the website look even better is greatly appreciated!
-If you encounter anything weird in the formatting, please email. Thank you for the help!
+If you encounter any bugs, please email. Thank you for the help!
 **Alicia Wang**
   
